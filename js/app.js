@@ -8,14 +8,15 @@ $(document).ready(function() {
 		//Prevent new page from opening on click
 		event.preventDefault();
 		
-		//Store image URL for overlay use
+		//Store image URL & image caption for overlay use
 		var $clickedImageURL = $(this).children().attr('src');
+		var $clickedImageCaption = $(this).children().attr('alt');
 
-		//Add image to overlay div
-		$('#overlay').html('<img src=\'' + $clickedImageURL + '\'><');
+		//Add image & caption to overlay div
+		$('#overlay').html('<img src=\'' + $clickedImageURL + '\'>' + '<p>' + $clickedImageCaption + '</p>');
 		
 		//Fade in overlay
-		$('#overlay').css('display', 'inline').fadeIn('fast');
+		$('#overlay').css('display', 'inline');
 	});
 });
 
