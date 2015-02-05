@@ -16,7 +16,12 @@ $(document).ready(function() {
 		$('#overlay').html('<img src=\'' + $clickedImageURL + '\'>' + '<p>' + $clickedImageCaption + '</p>');
 		
 		//Fade in overlay
-		$('#overlay').css('display', 'inline');
+		$('#overlay').fadeIn('fast');
+	});
+
+	//Hide overlay once user clicks on overlay
+	$('#overlay').click( function() {
+		$('#overlay').fadeOut('fast');
 	});
 });
 
