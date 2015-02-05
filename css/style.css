@@ -39,7 +39,8 @@ a {
 }
 
 #overlay img {
- margin-top: 10%; 
+ margin-top: 10%;
+ height: 60%;
 }
 
 #overlay p {
